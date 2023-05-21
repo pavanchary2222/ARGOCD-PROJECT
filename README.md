@@ -103,6 +103,19 @@ Jenkins Installation is Successful. You can now starting using the Jenkins
 <img width="1392" alt="Screenshot 2023-02-01 at 12 17 02 PM" src="https://user-images.githubusercontent.com/43399466/215973898-7c366525-15db-4876-bd71-49522ecb267d.png">
 
 Wait for the Jenkins to be restarted.
+ 
+ Configure a Sonar Server in ec2 instance where jenkins is hosted
+sudo -i 
+apt install unzip
+adduser sonarqube
+su sonarqube
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.4.0.54424.zip
+unzip *
+chmod -R 755 /home/sonarqube/sonarqube-9.4.0.54424
+chown -R sonarqube:sonarqube /home/sonarqube/sonarqube-9.4.0.54424
+cd sonarqube-9.4.0.54424/bin/linux-x86-64/
+./sonar.sh start
+Hurray !! Now you can access the SonarQube Server on http://<ip-address>:9000
 
 
 ## Docker Slave Configuration
