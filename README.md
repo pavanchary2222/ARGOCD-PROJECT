@@ -110,7 +110,8 @@ Wait for the Jenkins to be restarted.
 
 ##**Configure a Sonar Server in ec2 instance where jenkins is hosted**
 
-```sudo -i 
+```
+sudo -i 
 apt install unzip
 adduser sonarqube
 su sonarqube
